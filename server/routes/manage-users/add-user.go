@@ -9,8 +9,8 @@ import (
 )
 
 type AddUserResponse struct {
-	Success bool             `json:"success"`
-	Message string           `json:"message"`
+	Success bool   `json:"success"`
+	Message string `json:"message"`
 }
 
 func AddUserHandler(w http.ResponseWriter, r *http.Request) {
