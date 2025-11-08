@@ -3,7 +3,7 @@ import { FaBars, FaTimes, FaCogs } from "react-icons/fa";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(null); 
+  const [dropdownOpen, setDropdownOpen] = useState(null);
   const menuRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -78,7 +78,11 @@ export default function Header() {
                   <div
                     className={`absolute left-0 mt-2 w-48 bg-white border rounded-md shadow-lg z-50
                       transform transition-all duration-300 origin-top
-                      ${dropdownOpen === idx ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}
+                      ${
+                        dropdownOpen === idx
+                          ? "opacity-100 scale-100 pointer-events-auto"
+                          : "opacity-0 scale-95 pointer-events-none"
+                      }`}
                   >
                     {item.subMenu.map((sub, sIdx) => (
                       <a
@@ -133,7 +137,9 @@ export default function Header() {
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  dropdownOpen === idx ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+                  dropdownOpen === idx
+                    ? "max-h-60 opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
                 {item.subMenu.map((sub, sIdx) => (
