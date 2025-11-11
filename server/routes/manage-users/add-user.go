@@ -24,6 +24,7 @@ func AddUserHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid JSON format", http.StatusBadRequest)
 		return
 	}
+	
 	defer r.Body.Close()
 
 	if newUser.Username == "" || newUser.Email == "" || newUser.Role == "" {
