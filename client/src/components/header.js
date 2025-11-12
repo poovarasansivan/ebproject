@@ -17,9 +17,9 @@ export default function Header() {
     {
       name: "Labour",
       subMenu: [
-        { name: "Labour List", link: "/labour/list" },
-        { name: "Attendance", link: "/labour/attendance" },
-        { name: "Details", link: "/labour/details" },
+        { name: "Labour List", link: "/manage-labour/labour-list" },
+        { name: "Attendance", link: "/manage-labour/attendance" },
+        { name: "Details", link: "/manage-labour/details" },
       ],
     },
     {
@@ -164,7 +164,7 @@ export default function Header() {
             <a
               key={idx}
               href={item.link}
-              className="block px-4 py-2 text-gray-700 border-b border-gray-200 font-semibold hover:text-[#13732D]"
+              className="block px-4 py-2 text-gray-700 border-b border-gray-200 font-semibold hover:text-blue-600 transition-colors"
             >
               {item.name}
             </a>
