@@ -98,6 +98,7 @@ export default function LabourAttendance() {
 
             <tbody className="text-sm">
               {currentData.length > 0 ? (
+                
                 currentData.map((rec) => (
                   <tr key={rec.sno} className="border-b hover:bg-gray-50">
                     <td className="px-4 py-2">{rec.sno}</td>
